@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X.it's what's happening / X?
+    </title>
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/X_icon.svg.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        .sidebar img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .left div.d-flex {
+            padding: 8px;
+        }
+
+        .left div.d-flex:hover {
+            background-color: #333;
+            z-index: -1;
+        }
+
+        .left div.d-flex i {
+            font-size: 27px;
+            width: 30px;
+            height: 35px;
+        }
+
+        .middle .middle-header button:hover {
+            background-color: #333;
+            z-index: -1;
+        }
+
+        .right-hover:hover {
+            background-color: #333;
+            z-index: -1;
+        }
+
+        .verified {
+            position: relative;
+        }
+
+        .verfie {
+            position: relative;
+        }
+
+        #check {
+            position: absolute;
+            z-index: 2;
+            left: 5px;
+            top: 4px;
+            font-size: 15px;
+        }
+
+        .verified .fa-check {
+            position: absolute;
+            z-index: 2;
+            left: 5px;
+            top: 4px;
+            font-size: 15px;
+        }
+
+        .tweet-img {
+            padding: 5px;
+        }
+
+        .img-fluid {
+            width: 100%;
+            height: auto;
+        }
+
+        .search {
+            position: sticky;
+            top: 0;
+            background-color: black;
+            z-index: 4;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+
+        .fixed-sidebar {
+            position: fixed;
+            width: 15%;
+            height: 100%;
+        }
+
+        /* @media (max-width: 768px) {
+            .tweeter-content {
+                margin-left: 16%;
+                width: 80%;
+            }
+
+            .foryou {
+                width: 70%;
+            }
+        }
+
+        .containers {
+            margin: 0 120px;
+        } */
+
+        .container>.row {
+            flex-wrap: nowrap !important;
+        }
+
+        .foryou {
+            top: 0;
+        }
+
+        /* .foryou .acline::after {
+            content: '';
+            width: 10%;
+            height: 4px;
+            position: absolute;
+            bottom: 0%;
+            background-color: rgb(29 155 240);
+            left: 114px;
+            border-radius: 25px;
+        } */
+        .foryou button {
+            position: relative;
+        }
+
+        .foryou button.acline::after {
+            content: '';
+            width: 15%;
+            height: 4px;
+            position: absolute;
+            bottom: -1px;
+            background-color: rgb(29 155 240);
+            left: 43%;
+            border-radius: 25px;
+        }
+
+        .same-height {
+            width: 100%;
+            height: 250px;
+        }
+
+        .forlogout {
+            padding: 0 !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-2 col-md-1 col-sm-1  mt-2 me-3 d-none d-sm-block">
+                <div class="fixed-sidebar">
+                    <div class="sidebar d-flex flex-column justify-center align-items-start ">
+                        <img src="./images/1690643591twitter-x-logo-png.png" alt="" class="mb-3 ">
+                        <div class="left">
+                            <div class="d-flex align-items-center p-2 rounded-5">
+                                <i class="fa-solid fa-house me-3"></i>
+                                <h5 class="fw-bold d-none  d-xl-block">Home</h5>
+                            </div>
+                            <div class="d-flex align-items-center  p-2 rounded-5">
+                                <i class="fa-solid fa-magnifying-glass me-3"></i>
+                                <h5 class="fw-bold d-none  d-xl-block">Explore</h5>
+                            </div>
+                            <div class="d-flex align-items-center p-2 rounded-5">
+                                <i class="fa-regular fa-bell me-3"></i>
+                                <h5 class="fw-bold d-none  d-xl-block">Notifications</h5>
+                            </div>
+                            <div class="d-flex align-items-center p-2 rounded-5">
+                                <i class="fa-regular fa-envelope me-3"></i>
+                                <h5 class="fw-bold d-none  d-xl-block">Messages</h5>
+                            </div>
+                            <div class="d-flex align-items-center p-2 rounded-5">
+                                <i class="fa-solid fa-slash me-3"></i>
+                                <h5 class="fw-bold d-none  d-xl-block">Grok</h5>
+                            </div>
+                            <div class="bookmark d-flex align-items-center p-2 rounded-5">
+                                <i class="fa-regular fa-bookmark me-3"></i>
+                                <h5 class="fw-bold d-none  d-xl-block">Bookmarks</h5>
+                            </div>
+                            <div class="d-flex align-items-center p-2 rounded-5">
+                                <i class="fa-solid fa-users me-3"></i>
+                                <h5 class="fw-bold d-none  d-xl-block">Communities</h5>
+                            </div>
+                            <div class="d-flex align-items-center p-2 rounded-5">
+                                <i class="fa-brands fa-x-twitter me-3"></i>
+                                <h5 class="fw-bold d-none  d-xl-block">Premium</h5>
+                            </div>
+                            <div class="d-flex align-items-center p-2 rounded-5">
+                                <i class="fa-regular fa-user me-3"></i>
+                                <h5 class="fw-bold d-none  d-xl-block">Profile</h5>
+                            </div>
+                            <div class="d-flex align-items-center p-2 rounded-5">
+                                <i class="fa-solid fa-ellipsis me-3"></i>
+                                <h5 class="fw-bold d-none  d-xl-block">More</h5>
+                            </div>
+                            <button
+                                class="btn btn-primary text-center  p-2 px-5  rounded-5 fw-bolder mt-2 mb-3 d-none d-xl-block">post</button>
+                            <button
+                                class="btn btn-primary text-center p-3 rounded-circle fw-bolder mt-2 mb-3 d-none d-sm-block d-xl-none"><i
+                                    class="fa-solid fa-feather-pointed"></i></button>
+                        </div>
+                        <span class="btn forlogout" data-bs-container="body" data-bs-toggle="popover"
+                            data-bs-placement="top" data-bs-content="
+                                                        <div class='rounded-5 shadow-lg'>
+                                                            <a id='logout' class=&quot;btn btn-dark w-100&quot;>Log out </a>
+                                                        </div>
+                                                    ">
+                            <div class="d-flex align-items-center">
+                                <img id="userImage" src="/images/user.jpg" alt="" style="width: 50px; height: 50px;"
+                                    class="me-3 rounded-circle">
+                                <div class="user-info me-4 d-none d-xl-block">
+                                    <span id="userName" class="d-block text-light">theusername</span>
+                                    <span id="userFullname" class="text-secondary">@username</span>
+                                </div>
+                                <i class="fa-solid fa-ellipsis d-none d-lg-block d-xl-block"></i>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-11 col-sm-11  tweeter-content px-5">
+                <div class="middle d-flex flex-column border border-secondary border-top-0">
+                    <div
+                        class=" middle-header d-flex foryou position-sticky border-bottom border-secondary border-bottom mb-3 bg-black z-3">
+                        <button class="w-50 p-3 btn rounded-0 text-light acline" id="foryou">For you</button>
+                        <button class="w-50 p-3 btn rounded-0 text-light " id="following">Following</button>
+                    </div>
+                    <div class="user-tweet mb-1 pt-3 border-bottom border-secondary border-bottom mb-4">
+                        <form id="tweet-form">
+                            <div class="d-flex mx-3">
+                                <img src="/images/user.jpg" alt="" style="width: 50px; height: 50px; "
+                                    class="me-3 rounded-circle" id="userImage1">
+                                <textarea class="form-control bg-black textarea text-white"
+                                    id="exampleFormControlTextarea1" rows="3"
+                                    placeholder="What is happening?!"></textarea>
+                            </div>
+                            <div class="" style="margin-left: 80px;">
+                                <div class="d-flex align-items-center mt-2">
+                                    <i class="fa-solid fa-earth-americas text-primary me-2"></i>
+                                    <div id="demo" class="fw-bold text-primary">Everone can reply</div>
+                                </div>
+                                <hr class="text-light">
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    <div class="icons text-primary fs-5">
+                                        <i class="fa-regular fa-images  text-primary"></i>
+                                        <i class="fa-light fa-gif p-1 text-primary"></i>
+                                        <i class="fa-solid fa-square-poll-horizontal p-1 text-primary"></i>
+                                        <i class="fa-regular fa-face-smile p-1 text-primary"></i>
+                                        <i class="fa-regular fa-calendar p-1 text-primary"></i>
+                                        <i class="fa-solid fa-location-dot p-1 text-primary"></i>
+                                    </div>
+                                    <button class="btn btn-primary fw-bold rounded-5 mb-3 mx-3"
+                                        type="submit">Post</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="tweets d-flex flex-column mt-2 me-1" id="following-tweets">
+                <div class="tweett mb-3 border-bottom border-secondary">
+                    <span class="text-secondary ms-5"><i class="fa-solid fa-arrows-rotate pe-1"></i>Google
+                        reposted</span>
+                    <div class="tweet-header d-flex mx-3">
+                        <img src="./images/bWupXdxo_400x400.jpg" alt="" style="width: 50px; height: 50px;"
+                            class="me-3 rounded-circle">
+                        <div class="d-flex flex-column">
+                            <div class="user-info d-flex justify-content-between">
+                                <div class="d-flex gap-2">
+                                    <span class="fw-bold text-light">Google</span>
+                                    <div class="verified">
+                                        <i class="fa-solid fa-certificate text-primary fs-4"></i>
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    <span class="text-secondary">@Google</span>
+                                    <span class="text-secondary"> .13h</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </div>
+                            <div class="tweet-text text-light">
+                                Revisit our biggest <span class="text-info">#GoogleIO</span> announcements with
+                                our new crossword puzzle —
+                                built with a little help from the Gemini API ↓
+                            </div>
+                            <div class="tweet-img row mt-3">
+                                <img src="./images/eW_F4-RA.jpg" alt="" class=" img-fluid">
+                            </div>
+                            <div class="tweet-footer d-flex justify-content-between mt-3 mb-2">
+                                <span class="text-secondary"><i class="fa-regular fa-comment pe-1 ms-3"></i>26</span>
+                                <span class="text-secondary"><i class="fa-solid fa-arrows-rotate pe-1"></i>34</span>
+                                <span class="text-secondary"><i class="fa-regular fa-heart pe-1"></i>204</span>
+                                <span class="text-secondary"><i
+                                        class="fa-solid fa-square-poll-vertical pe-1"></i>82K</span>
+                                <div>
+                                    <i class="fa-regular fa-bookmark me-2"></i>
+                                    <i class="fa-solid fa-arrow-up-from-bracket me-3"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tweett mb-5 border-bottom border-secondary">
+                    <div class="tweet-header d-flex mx-3">
+                        <img src="./images/QyzbojaI_400x400.jpg" alt="" style="width: 50px; height: 50px;"
+                            class="me-3 rounded-circle">
+                        <div class="d-flex flex-column">
+                            <div class="user-info d-flex justify-content-between">
+                                <div class="d-flex gap-2">
+                                    <span class="fw-bold text-light">Marvel Comics</span>
+                                    <div class="verified">
+                                        <i class="fa-solid fa-certificate text-primary fs-4"></i>
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    <span class="text-secondary">@Marvel</span>
+                                    <span class="text-secondary"> .Jun 28</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </div>
+                            <div class="tweet-text text-light">
+                                Marvel Studios <span class="text-info">#DeadpoolAndWolverine </span> takes over
+                                <span class="text-info">#MarvelComics</span> in five all-new
+                                Movie Variant Covers that will adorn various Deadpool and Wolverine-led comic
+                                book series all summer long! 🧵 ⬇️
+                            </div>
+                            <div class="tweet-img  mt-3 d-flex">
+                                <div>
+                                    <img src="./images/GRLPRyWW8AELaFf.jpg" alt="" class="img-fluid same-height ">
+                                    <img src="./images/GRLPSd_WkAA7CtF.jpg" alt="" class="img-fluid same-height ">
+                                </div>
+                                <div>
+                                    <img src="./images/GRLPSI0WcAAkn2x.jpg" alt="" class="img-fluid same-height ">
+                                    <img src="./images/GRLPTv5XgAAjN3b.jpg" alt="" class="img-fluid same-height ">
+                                </div>
+                            </div>
+                            <div class="tweet-footer d-flex justify-content-between mt-3 mb-2">
+                                <span class="text-secondary"><i class="fa-regular fa-comment pe-1 ms-3"></i>23K</span>
+                                <span class="text-secondary"><i class="fa-solid fa-arrows-rotate pe-1"></i>16K</span>
+                                <span class="text-secondary"><i class="fa-regular fa-heart pe-1"></i>165K</span>
+                                <span class="text-secondary"><i
+                                        class="fa-solid fa-square-poll-vertical pe-1"></i>24M</span>
+                                <div>
+                                    <i class="fa-regular fa-bookmark me-2"></i>
+                                    <i class="fa-solid fa-arrow-up-from-bracket me-3"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tweett mb-5 border-bottom border-secondary">
+                    <div class="tweet-header d-flex mx-3">
+                        <img src="./images/bWupXdxo_400x400.jpg" alt="" style="width: 50px; height: 50px;"
+                            class="me-3 rounded-circle">
+                        <div class="d-flex flex-column">
+                            <div class="user-info d-flex justify-content-between">
+                                <div class="d-flex gap-2">
+                                    <span class="fw-bold text-light">Google</span>
+                                    <div class="verified">
+                                        <i class="fa-solid fa-certificate text-primary fs-4"></i>
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    <span class="text-secondary">@Google</span>
+                                    <span class="text-secondary"> .13h</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </div>
+                            <div class="tweet-text text-light">
+                                Bright blue hyperlinks, you won’t be missed 😘 go now a design what you want →
+                                <span class="text-info">goo.gle/4bmOSoF</span>
+                            </div>
+                            <div class="tweet-img row mt-3">
+                                <video src="/images/Home _ X.mp4" class="object-fit-fill" style=" height: 400px;"
+                                    controls></video>
+                            </div>
+                            <div class="tweet-footer d-flex justify-content-between mt-3 mb-2">
+                                <span class="text-secondary"><i class="fa-regular fa-comment pe-1 ms-3"></i>26</span>
+                                <span class="text-secondary"><i class="fa-solid fa-arrows-rotate pe-1"></i>34</span>
+                                <span class="text-secondary"><i class="fa-regular fa-heart pe-1"></i>204</span>
+                                <span class="text-secondary"><i
+                                        class="fa-solid fa-square-poll-vertical pe-1"></i>82K</span>
+                                <div>
+                                    <i class="fa-regular fa-bookmark me-2"></i>
+                                    <i class="fa-solid fa-arrow-up-from-bracket me-3"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tweett mb-5 border-bottom border-secondary">
+                    <div class="tweet-header d-flex mx-3">
+                        <img src="./images/p78MCn3B_400x400.jpg" alt="" style="width: 50px; height: 50px;"
+                            class="me-3 rounded-circle">
+                        <div class="d-flex flex-column">
+                            <div class="user-info d-flex justify-content-between">
+                                <div class="d-flex gap-2">
+                                    <span class="fw-bold text-light">Elon Musk</span>
+                                    <div class="verified">
+                                        <i class="fa-solid fa-certificate text-primary fs-4"></i>
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    <span class="text-secondary">@elonmusk</span>
+                                    <span class="text-secondary"> .1h</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </div>
+                            <div class="tweet-text text-light">
+                                Our greatest dream is to send a spaceship to Uranus so we can explore the
+                                unknown world
+                            </div>
+                            <div class="tweet-footer d-flex justify-content-between mt-3 mb-2">
+                                <span class="text-secondary"><i class="fa-regular fa-comment pe-1 ms-3"></i>23K</span>
+                                <span class="text-secondary"><i class="fa-solid fa-arrows-rotate pe-1"></i>16K</span>
+                                <span class="text-secondary"><i class="fa-regular fa-heart pe-1"></i>165K</span>
+                                <span class="text-secondary"><i
+                                        class="fa-solid fa-square-poll-vertical pe-1"></i>24M</span>
+                                <div>
+                                    <i class="fa-regular fa-bookmark me-2"></i>
+                                    <i class="fa-solid fa-arrow-up-from-bracket me-3"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tweets d-flex flex-column mt-2 me-1" id="tweets-container">
+            </div>
+            <ul id="pagination" class="pagination justify-content-center mt-4"></ul>
+        </div>
+    </div>
+    <div class="col-lg-3  d-none d-lg-block">
+        <div class="right f-flex flex-column mt-2">
+            <div class="search">
+                <div class="input-group">
+                    <input type="search" class="form-control rounded-5 ps-5 bg-dark text-secondary search p-2"
+                        placeholder="Search..." style="z-index: 1;">
+                    <i class="fa-solid fa-magnifying-glass text-secondary search-icon"></i>
+                </div>
+            </div>
+            <div class="Subscribe mt-3 p-3 border border-1 border-secondary rounded-4">
+                <h4 class="fw-bold">Subscribe to Premium</h4>
+                <p class="text-secondary">Subscribe to unlock new features and if eligible, receive a share of
+                    ads revenue.</p>
+                <button class="btn btn-info text-white fw-bold text-center rounded-5">Subscribe</button>
+            </div>
+            <div class=" mt-3  border border-1 border-secondary rounded-4">
+                <div class="p-3 right-hover">
+                    <h4 class="fw-bold">What's happening</h4>
+                    <div class="d-flex">
+                        <img src="/images/rLEEwwZX.jpg" alt="" style="width: 80px; height: 80px;"
+                            class="rounded-3 me-2">
+                        <div>
+                            <span class="fw-bold text-light">Paraguay vs Brazil</span>
+                            <p class="text-secondary" style="font-size: 13px;">Copa América · This morning
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-hover d-flex justify-content-between align-items-center mt-2 px-3">
+                    <div>
+                        <p class="text-secondary" style="font-size: 13px;">Technology·
+                            Trending
+                        </p>
+                        <span class="fw-bold text-light">Samsung</span>
+                        <p class="text-secondary" style="font-size: 13px;">22.8K posts
+                        </p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div class="right-hover d-flex justify-content-between align-items-center mt-2 px-3">
+                    <div>
+                        <p class="text-secondary" style="font-size: 13px;">Action games . Trending
+                        </p>
+                        <span class="fw-bold text-light">Elden ring</span>
+                        <p class="text-secondary" style="font-size: 13px;">322.8K posts
+                        </p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div class="right-hover d-flex justify-content-between align-items-center mt-2 px-3">
+                    <div>
+                        <p class="text-secondary" style="font-size: 13px;">
+                            Trending
+                        </p>
+                        <span class="fw-bold text-light">Github</span>
+                        <p class="text-secondary" style="font-size: 13px;">7.1K posts
+                        </p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div class="right-hover d-flex justify-content-between align-items-center mt-2 px-3">
+                    <div>
+                        <p class="text-secondary" style="font-size: 13px;">Technology·
+                            Trending
+                        </p>
+                        <span class="fw-bold text-light">lenovo Legion 5</span>
+                        <p class="text-secondary" style="font-size: 13px;">64.7K posts
+                        </p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <button class="btn btn-default text-primary">Show more</button>
+            </div>
+            <div class=" mt-3  border border-1 border-secondary rounded-4 p-3">
+                <span class="fw-bold fs-4 text-white">Who to follow</span>
+                <div class="user-follow mt-4">
+                    <div class="d-flex align-items-center position-relative">
+                        <img src="./images/Instagram_icon.png.webp" alt="" style="width: 50px; height: 50px; "
+                            class="rounded-circle col-4">
+                        <div class="ms-2">
+                            <div class="d-flex col-4">
+                                <span class="fw-bold me-2 text-light">Instagram</span>
+                                <div class="verfie">
+                                    <i class="fa-solid fa-certificate text-primary fs-5 "></i>
+                                    <i class="fa-solid fa-check" id="check" style="font-size: 13px;"></i>
+                                </div>
+                            </div>
+                            <span class="text-secondary me-2">@instagram</span>
+                        </div>
+                        <button class="btn btn-light rounded-5  position-absolute follow1"
+                            style="right: 0px;">Follow</button>
+                    </div>
+                </div>
+                <div class="user-follow mt-4">
+                    <div class="d-flex align-items-center  position-relative">
+                        <img src="./images/S2fbJQsX_400x400.jpg" alt="" style="width: 50px; height: 50px; "
+                            class="rounded-circle">
+                        <div class="ms-2">
+                            <div class="d-flex">
+                                <span class="fw-bold me-2 text-light">FFVIIR</span>
+                                <div class="verfie">
+                                    <i class="fa-solid fa-certificate text-primary fs-5 "></i>
+                                    <i class="fa-solid fa-check" id="check" style="font-size: 13px;"></i>
+                                </div>
+                            </div>
+                            <span class="text-secondary me-2">@finalfantasyvii</span>
+                        </div>
+                        <button class="btn btn-light rounded-5 follow2 position-absolute"
+                            style="right: 0px;">Follow</button>
+                    </div>
+                </div>
+                <div class="user-follow mt-4">
+                    <div class="d-flex align-items-center  position-relative">
+                        <img src="./images/1690643591twitter-x-logo-png.png" alt="" style="width: 50px; height: 50px; "
+                            class="rounded-circle">
+                        <div class="ms-2 ">
+                            <div class="d-flex">
+                                <span class="fw-bold me-2 text-light">X</span>
+                                <div class="verfie">
+                                    <i class="fa-solid fa-certificate text-primary fs-5 "></i>
+                                    <i class="fa-solid fa-check" id="check" style="font-size: 13px;"></i>
+                                </div>
+                            </div>
+                            <span class="text-secondary me-2 me-5">@x</span>
+                        </div>
+                        <button class="btn btn-light rounded-5 follow3 position-absolute"
+                            style="right: 0px;">Follow</button>
+                    </div>
+                </div>
+                <button class="btn btn-default text-primary mt-2">Show more</button>
+            </div>
+            <footer class="mt-4 position-sticky" style="right: 0;">
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="footer-links text-secondary">
+                            <a href="#">Terms of Service</a>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Cookie Policy</a>
+                            <a href="#">Accessibility</a>
+                            <a href="#">Ads info</a>
+                            <a href="#">More ...</a>
+                        </div>
+                        <p class="text-secondary">© 2024 X Corp.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+<script src="js/jquery-3.1.1.js"></script>
+<script>
+    $(document).ready(function () {
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl, {
+            html: true
+        }))
+        $('#foryou').on('click', function () {
+            $('#following').removeClass('acline')
+            $('#following-tweets').addClass('flex-column')
+            $('#following-tweets').removeClass('flex-column-reverse')
+            $('#foryou').addClass('acline')
+            $('#tweets-container,#pagination').removeClass('d-none');
+        })
+        $('#following').on('click', function () {
+            $('#foryou').removeClass('acline')
+            $('#following-tweets').removeClass('flex-column')
+            $('#following-tweets').addClass('flex-column-reverse')
+            $('#following').addClass('acline')
+            $('#tweets-container,#pagination').addClass('d-none');
+
+        })
+        $('.follow1').on('click', function () {
+            $('.follow1').removeClass('btn-light')
+            $('.follow1').addClass('btn-outline-dark text-light')
+            $('.follow1').text('following')
+        })
+        $('.follow2').on('click', function () {
+            $('.follow2').removeClass('btn-light')
+            $('.follow2').addClass('btn-outline-dark text-light')
+            $('.follow2').text('following')
+        })
+        $('.follow3').on('click', function () {
+            $('.follow3').removeClass('btn-light')
+            $('.follow3').addClass('btn-outline-dark text-light')
+            $('.follow3').text('following')
+        })
+
+
+
+        const tweetsPerPage = 7;
+        let currentPage = 1;
+        let totalTweets = 0;
+        let tweets = [];
+
+        function getAllTweets() {
+            const api = `https://retoolapi.dev/uMnLBj/data`;
+            $.getJSON(api, function (data) {
+                tweets = data;
+                totalTweets = tweets.length;
+                createPagination(totalTweets);
+                displayTweets(currentPage);
+            }).fail(function () {
+                console.error("Error fetching the data");
+            });
+        }
+        function displayTweets(page) {
+            $('#tweets-container').empty();
+            const start = (page - 1) * tweetsPerPage;
+            const end = start + tweetsPerPage;
+            const tweetsToDisplay = tweets.slice(start, end);
+
+            let tweetList = "";
+            $.each(tweetsToDisplay, function (index, tweet) {
+                let profilePicUrl = tweet.profilepic || currentUser.img;
+
+
+                tweetList += `<div class="tweet mb-5 border-bottom border-secondary">
+                        <div class="tweet-header d-flex mx-3">
+                            <img src="${profilePicUrl}" id="profilepic${index}" alt="" style="width: 50px; height: 50px;" class="me-3 rounded-circle">
+                            <div class="d-flex flex-column">
+                                <div class="user-info d-flex justify-content-between">
+                                    <div class="d-flex gap-2">
+                                        <span class="fw-bold text-white">${tweet.username}</span>
+                                        <div class="verified">
+                                        <i class="fa-solid fa-certificate text-primary fs-4"></i>
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                        <span class="text-secondary">@${tweet.name}</span>
+                                        <span class="text-secondary">${moment(tweet.date).fromNow()}</span>
+                                    </div>
+                                    
+                                    <div>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </div>
+                                </div>
+                                <div class="tweet-text text-light">
+                                    ${tweet.tweet}
+                                </div>
+                                <div class="tweet-img row mt-3">
+                                    <img style="height:400px ;" src="./images/DALL·E-2024-04-04-07.15.00-A-luxurious-and-nature-infused-good-morning-wish-image-showcasing-an-elegant-fusion-of-natural-beauty-and-high-end-design.-The-scene-features-a-breat.jpg" alt="" class=" img-fluid rounded-5">
+                                </div>
+                                <div class="tweet-footer d-flex justify-content-between mt-3 mb-2">
+                                    <span class="text-secondary"><i class="fa-regular fa-comment pe-1 ms-3"></i> ${tweet.likes}K</span>
+                                    <span class="text-secondary"><i class="fa-solid fa-arrows-rotate pe-1"></i> ${tweet.comment}K</span>
+                                    <span class="text-secondary"><i class="fa-regular fa-heart pe-1"></i> ${tweet.retweet}K</span>
+                                    <span class="text-secondary"><i class="fa-solid fa-square-poll-vertical pe-1"></i> ${tweet.views}M</span>
+                                    <div>
+                                        <i class="fa-regular fa-bookmark me-2"></i>
+                                        <i class="fa-solid fa-arrow-up-from-bracket me-3"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+            });
+            $('#tweets-container').append(tweetList);
+        }
+
+
+        function createPagination(totalTweets) {
+            const totalPages = Math.ceil(totalTweets / tweetsPerPage);
+            $('#pagination').empty();
+            for (let i = 1; i <= totalPages; i++) {
+                $('#pagination').append(`<li class="page-item text-black ${i === currentPage ? 'active' : ''}">
+                        <a class="page-link bg-black" href="#">${i}</a>
+                    </li>`);
+            }
+
+            $('#pagination .page-link').on('click', function (e) {
+                e.preventDefault();
+                currentPage = parseInt($(this).text());
+                displayTweets(currentPage);
+                $('#pagination .page-item').removeClass('active');
+                $(this).parent().addClass('active');
+            });
+        }
+
+        getAllTweets();
+
+
+        const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+        if (currentUser) {
+            $('#userFullname').text(currentUser.name)
+            $('#userName').text(`@${currentUser.username}`)
+            $('[data-bs-toggle="popover"]').on('shown.bs.popover', function () {
+                $('#logout').text(`log out @${currentUser.username}`);
+            });
+            $('#userImage').attr('src', currentUser.img)
+            $('#userImage1').attr('src', currentUser.img)
+        }
+        else {
+            alert('you are not loged in redirect to log in page');
+            window.location.href = './Signup.html';
+        }
+        $('#tweet-form').submit(function (event) {
+            event.preventDefault();
+
+            const newTweet = {
+                username: currentUser.username,
+                name: currentUser.name,
+                date: new Date().toISOString(),
+                tweet: $('#exampleFormControlTextarea1').val(),
+                likes: Math.floor(Math.random() * 1000),
+                comment: Math.floor(Math.random() * 1000),
+                retweet: Math.floor(Math.random() * 1000),
+                views: Math.floor(Math.random() * 1000),
+            };
+
+            $.ajax({
+                url: 'https://retoolapi.dev/uMnLBj/data',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(newTweet),
+                success: function (response) {
+                    console.log('Tweet added successfully:', response);
+                    $('#tweet-form')[0].reset();
+                    getAllTweets();
+                },
+                error: function (error) {
+                    console.error('Error adding tweet:', error);
+                }
+            });
+        });
+
+        $(document).on('click', '#logout', function () {
+            sessionStorage.removeItem('currentUser')
+            window.location.href = './Signup.html';
+        });
+    })
+</script>
+
+</html>

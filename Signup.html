@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>X.it's what's happening / X?
+    </title>
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/X_icon.svg.png">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .info button {
+        width: 300px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <section class="main-x d-lg-flex flex-lg-row justify-content-between align-items-center flex-md-column">
+            <!-- <svg class="p-5" viewBox="0 0 24 24" aria-hidden="true" width="600" height="400"
+                class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-rxcuwo r-1777fci r-m327ed r-494qqr">
+                <g>
+                    <path fill="#e7e9ea"
+                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                    </path>
+                </g>
+            </svg> -->
+            <div class="img p-5">
+                <picture>
+                    <source srcset="/images/1690643591twitter-x-logo-png.png" type="image/png">
+                    <img src="/images/1690643591twitter-x-logo-png.png" alt="" class="img">
+                </picture>
+            </div>
+            <div class="content p-5">
+                <div class="text">
+                    <h1 class="fw-bolder pb-3 d-none d-sm-block" style="font-size: 70px;">Happening now</h1>
+                    <h4 class="fw-bold" style="font-size: 40px;">Join today.</h4>
+                </div>
+                <div class="info w-100">
+                    <div class="links d-flex flex-column">
+                        <button class="gsi-material-button rounded-5 mb-2 mt-3 fs-6 fw-bold">
+                            <div class="gsi-material-button-state"></div>
+                            <div class="gsi-material-button-content-wrapper">
+                                <div class="gsi-material-button-icon">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" style="display: block;">
+                                        <path fill="#EA4335"
+                                            d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z">
+                                        </path>
+                                        <path fill="#4285F4"
+                                            d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z">
+                                        </path>
+                                        <path fill="#FBBC05"
+                                            d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z">
+                                        </path>
+                                        <path fill="#34A853"
+                                            d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z">
+                                        </path>
+                                        <path fill="none" d="M0 0h48v48H0z"></path>
+                                    </svg>
+                                </div>
+                                <span class="gsi-material-button-contents">Sign in with Google</span>
+                                <span style="display: none;">Sign in with Google</span>
+                            </div>
+                        </button>
+                        <button href="#"
+                            class="btn btn-light rounded-5  ps-5 fw-semibold apple-signin-button position-relative">
+                            <i class="fab fa-apple position-absolute" style="color: black;"></i>
+                            Sign in with Apple
+                        </button>
+                    </div>
+                    <div class="divider m-2 w-100">or</div>
+                    <div class="links ">
+                        <button class="btn btn-info rounded-5 text-white  mb-1" data-bs-target="#exampleModalToggle3"
+                            data-bs-toggle="modal">Create
+                            account</button>
+                        <small class="d-block text-secondary " style="width: 300px;">By signing up, you
+                            agree to the <a href="#" class="text-primary">Terms
+                                of Service</a> and
+                            <a href="#" class="text-primary">Privacy Policy</a>,
+                            including <a href="#" class="text-primary">Cookie Use.</a></small>
+                    </div>
+                    <div class="last mt-5">
+                        <h5>Already have an account?</h5>
+                        <button style="border: 1px solid white;"
+                            class=" btn btn-outline-dark text-center text-info mt-3 rounded-5  hover"
+                            data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Sign
+                            in</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Login section -->
+    <form action="#" method="get" id="signin" class="needs-validation" novalidate>
+        <div class="modal fade rounded-5" id="exampleModalToggle" aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-white bg-black">
+                    <div class="modal-header">
+                        <img src="/images/1690643591twitter-x-logo-png.png " alt="" class="modal-title"
+                            id="exampleModalToggleLabel">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container">
+                        <div class="signin-content">
+                            <div class="modal-body text-white">
+                                <h3 class="fw-bolder">Sign in to X</h3>
+                                <div class="links d-flex flex-column">
+                                    <button class="gsi-material-button rounded-5 mb-2 mt-3 fs-6 fw-bold">
+                                        <div class="gsi-material-button-state"></div>
+                                        <div class="gsi-material-button-content-wrapper">
+                                            <div class="gsi-material-button-icon">
+                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 48 48" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    style="display: block;">
+                                                    <path fill="#EA4335"
+                                                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z">
+                                                    </path>
+                                                    <path fill="#4285F4"
+                                                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z">
+                                                    </path>
+                                                    <path fill="#FBBC05"
+                                                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z">
+                                                    </path>
+                                                    <path fill="#34A853"
+                                                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z">
+                                                    </path>
+                                                    <path fill="none" d="M0 0h48v48H0z"></path>
+                                                </svg>
+                                            </div>
+                                            <span class="gsi-material-button-contents">Sign in with Google</span>
+                                            <span style="display: none;">Sign in with Google</span>
+                                        </div>
+                                    </button>
+                                    <button href="#"
+                                        class="btn btn-light rounded-5 ps-5 fw-semibold apple-signin-button position-relative">
+                                        <i class="fab fa-apple position-absolute" style="color: black;"></i>
+                                        Sign in with Apple
+                                    </button>
+                                </div>
+                                <div class="divider m-2">or</div>
+                                <div class="form-floating">
+                                    <input type="email" class="form-control bg-black text-white p-4 pb-2" id="email1"
+                                        placeholder="name@example.com" name="email" required>
+                                    <label for="email1">Email</label>
+                                    <div class="valid-feedback mb-1">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback mb-1">
+                                        Please enter a valid email.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer d-flex flex-column">
+                                <button class="btn btn-white bg-white rounded-5  mb-3 mt-4 w-100 fw-semibold"
+                                    data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                                    onclick="return false;">Next</button>
+                                <button style="border: 1px solid white;"
+                                    class=" btn btn-outline-light  rounded-5 w-100 ">Forgot
+                                    password?</button>
+                                <span class="text-start mb-5 mt-5">Don't have an account?<a href=""> Sign up</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-white bg-black">
+                    <div class="modal-header">
+                        <img src="/images/1690643591twitter-x-logo-png.png " alt="" class="modal-title"
+                            id="exampleModalToggleLabel">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container">
+                        <div class="signin-last">
+                            <div class="modal-body">
+                                <div class="d-flex m-4 justify-content-between">
+                                    <h3 class="fw-bolder">Enter your password.</h3>
+                                    <button class="btn btn-danger " data-bs-target="#exampleModalToggle"
+                                        data-bs-toggle="modal">Return</button>
+                                </div>
+                                <div id="v1" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+                                    <strong>warning</strong> invalid email or password.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div id="v2" class="alert alert-success alert-dismissible fade show d-none"
+                                    role="alert">
+                                    <strong>success</strong> Your log in was successful you will be directed to home
+                                    page shortly
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="form-floating">
+                                    <input type="email" id="floatingInput"
+                                        class="form-control bg-dark text-white p-4 pb-2 mb-3 mt-4 emailNumbertwo"
+                                        aria-describedby="emailHelp" placeholder="Phone, email, or username" disabled>
+                                    <label for="email1">Email</label>
+                                    <label for="floatingInput">Email address</label>
+                                </div>
+                                <div id="v1" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+                                    <strong>warning</strong> invalid email or password.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="form-floating my-5 position-relative">
+                                    <input type="password" id="password1"
+                                        class="form-control bg-black text-white p-4 pb-2" placeholder="Password"
+                                        name="password" minlength="6" required>
+                                    <button class="btn eye" onclick="return false"><i
+                                            class="fa-regular fa-eye"></i></button>
+                                    <label for="password1" class="text-bg-white">Password</label>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Password must be at least 6 characters long.
+                                    </div>
+                                </div>
+                                <p><a href="" class="text-primary">Forgot password?</a></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button style="border: 1px solid white;"
+                                    class=" btn btn-light text-center mt-5 rounded-5 w-100" type="submit" id="bttn">Sign
+                                    in</button>
+                                <span class="mb-5 mt-5 ">Don't have an account?<a href="">Sign up</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- Login section -->
+
+
+    <!-- sign up section -->
+    <form action="#" method="get" id="signup" class="needs-validation" novalidate>
+        <div class="modal fade rounded-5" id="exampleModalToggle3" aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-white bg-black">
+                    <div class="modal-header">
+                        <img src="/images/1690643591twitter-x-logo-png.png " alt="" class="modal-title"
+                            id="exampleModalToggleLabel">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container">
+                        <div class="register-content">
+                            <div class="modal-body text-white">
+                                <h2 class="fw-bolder">Create your account</h2>
+                                <div class="form-floating ">
+                                    <input type="text" class="form-control bg-black text-white p-4 pb-2 mt-5  counter"
+                                        id="name" name="name" placeholder="" maxlength="50" required>
+                                    <label for="name">Name</label>
+                                    <span class="name-count">0/50</span>
+                                    <div class="valid-feedback mb-1">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback mb-1">
+                                        Please enter your name.
+                                    </div>
+                                </div>
+                                <div class="form-floating">
+                                    <input type="email" class="form-control bg-black text-white p-4 pb-2 mt-3"
+                                        id="email" placeholder="name@example.com" name="email" required>
+                                    <label for="email">Email</label>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email.
+                                    </div>
+                                </div>
+                                <div class="reg-content">
+                                    <span class="d-block mt-5">Date of birth</span>
+                                    <small class="text-secondary d-block">This will not be shown publicly. Confirm your
+                                        own
+                                        age,
+                                        even if this account is for a
+                                        business, a pet, or something else.</small>
+                                    <div class="row mt-3 mb-5">
+                                        <div class="col-5">
+                                            <select id="month" class="form-control bg-black text-white" name="month"
+                                                required>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Please select a month.
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <select id="day" class="form-control bg-black text-white" name="day"
+                                                required>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Please select a day.
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <select id="year" class="form-control bg-black text-white" name="year"
+                                                required>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Please select a year.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer d-flex flex-column">
+                                <button class="btn btn-light  rounded-5  mb-3 mt-4 p-2 w-100 fw-semibold"
+                                    data-bs-target="#exampleModalToggle4" data-bs-toggle="modal" onclick="return false;"
+                                    id="next-btn-1">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-white bg-black">
+                    <div class="modal-header">
+                        <img src="/images/1690643591twitter-x-logo-png.png " alt="" class="modal-title"
+                            id="exampleModalToggleLabel">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container">
+                        <div class="register-last">
+                            <div class="modal-body">
+                                <div class="d-flex  mt-3 justify-content-between">
+                                    <h3 class="fw-bolder">You'll need a password</h3>
+                                    <button class="btn btn-danger " data-bs-target="#exampleModalToggle3"
+                                        data-bs-toggle="modal" onclick="return false;">Return</button>
+                                </div>
+                                <small class="d-block text-secondary">Make sure it's 8 characters or more.</small>
+                                <div class="form-floating my-5 position-relative">
+                                    <input type="password" id="password"
+                                        class="form-control bg-black text-white p-4 pb-2" placeholder="Password"
+                                        name="password" minlength="6" required>
+                                    <button class="btn eye" onclick="return false"><i
+                                            class="fa-regular fa-eye"></i></button>
+                                    <label for="password" class="text-bg-white">Password</label>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Password must be at least 6 characters long.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <small class="d-block text-secondary">By signing up, you agree to the <a href="#"
+                                        class="text-primary">Terms
+                                        of Service</a> and
+                                    <a href="#" class="text-primary">Privacy Policy</a>,
+                                    including <a href="#" class="text-primary">Cookie Use.</a> x may use your contact
+                                    information, including your email address and phone number for purposes
+                                    outlined in our Privacy Policy, like keeping your account secure and personalizing
+                                    our
+                                    services, including ads. <a href="#" class="text-primary">Learn more.</a> Others
+                                    will be
+                                    able to find you by
+                                    email or phone
+                                    number, when provided, unless you choose otherwise <a href="#"
+                                        class="text-primary">here</a>. </small>
+                                <button style="border: 1px solid white;"
+                                    class=" btn btn-light text-center mt-5 rounded-5 w-100"
+                                    data-bs-target="#exampleModalToggle5" data-bs-toggle="modal" onclick="return false;"
+                                    id="next-btn-2">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle5" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-white bg-black">
+                    <div class="modal-header">
+                        <img src="/images/1690643591twitter-x-logo-png.png " alt="" class="modal-title"
+                            id="exampleModalToggleLabel">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container">
+                        <div class="register-last">
+                            <div class="modal-body">
+                                <div class="d-flex  mt-3 justify-content-between">
+                                    <h3 class="fw-bolder">Pick a profile picture</h3>
+                                    <button class="btn btn-danger " data-bs-target="#exampleModalToggle4"
+                                        data-bs-toggle="modal" onclick="return false;">Return</button>
+                                </div>
+                                <small class="d-block text-secondary">Have a favorite selfie? Upload it now.</small>
+                                <div class="my-4 d-flex flex-column justify-content-center align-items-center">
+                                    <img src="./images/user.jpg" alt="" class="w-50 h-50 rounded-circle mb-5 m-5"
+                                        id="imgpreview">
+                                    <input id="img" type="file" class="form-control" aria-label="file example"
+                                        accept=".jpg, .jpeg, .png" required>
+                                    <div class="invalid-feedback">
+                                        Please select an image.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button style="border: 1px solid white;"
+                                    class=" btn btn-light text-center mt-5 rounded-5 w-100"
+                                    data-bs-target="#exampleModalToggle6" data-bs-toggle="modal"
+                                    onclick="return false;">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle6" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-white bg-black">
+                    <div class="modal-header">
+                        <img src="/images/1690643591twitter-x-logo-png.png " alt="" class="modal-title"
+                            id="exampleModalToggleLabel">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container">
+                        <div class="register-last">
+                            <div class="modal-body">
+                                <div class="d-flex  mt-3 justify-content-between">
+                                    <h3 class="fw-bolder">What should we call you?</h3>
+                                    <button class="btn btn-danger" data-bs-target="#exampleModalToggle5"
+                                        data-bs-toggle="modal" style="height: 40px;"
+                                        onclick="return false;">Return</button>
+                                </div>
+                                <small class="d-block text-secondary">Your @username is unique. You can always change it
+                                    later.</small>
+                                <div id="v3" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+                                    <strong>warning</strong> something is wrong check you information and try again.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div id="v4" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+                                    <strong>warning</strong> the Email you used is already exist.use a different email.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div id="v5" class="alert alert-success alert-dismissible fade show d-none"
+                                    role="alert">
+                                    <strong>success</strong> Your Register was successful you will be directed to login
+                                    page shortly
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="input-group my-5 text-white">
+                                    <span class="input-group-text bg-black text-white" id="basic-addon1">@</span>
+                                    <input type="text" class="form-control bg-black text-white placeholder"
+                                        placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"
+                                        id="username" name="username" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please type a username.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button style="border: 1px solid white;"
+                                    class=" btn btn-light text-center mt-5 rounded-5 w-100" type="submit">Sign
+                                    up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- sign up section -->
+    <footer class="bg-dark text-white  py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="footer-links ">
+                        <a href="#">About</a>
+                        <a href="#">Download the X app</a>
+                        <a href="#">Help Center</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Cookie Policy</a>
+                        <a href="#">Accessibility</a>
+                        <a href="#">Ads info</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Brand Resources</a>
+                        <a href="#">Advertising</a>
+                        <a href="#">Marketing</a>
+                        <a href="#">X for Business</a>
+                        <a href="#">Developers</a>
+                        <a href="#">Directory</a>
+                        <a href="#">Settings</a>
+                    </div>
+                    <p class="">© 2024 X Corp.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./JS/script.js"></script>
+
+</body>
+
+</html>
