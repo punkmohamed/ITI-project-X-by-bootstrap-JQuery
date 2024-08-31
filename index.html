@@ -731,19 +731,19 @@
 
 
         const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-        if (currentUser) {
-            $('#userFullname').text(currentUser.name)
-            $('#userName').text(`@${currentUser.username}`)
-            $('[data-bs-toggle="popover"]').on('shown.bs.popover', function () {
-                $('#logout').text(`log out @${currentUser.username}`);
-            });
-            $('#userImage').attr('src', currentUser.img)
-            $('#userImage1').attr('src', currentUser.img)
-        }
-        else {
-            alert('you are not loged in redirect to log in page');
-            window.location.href = './Signup.html';
-        }
+        // if (currentUser) {
+        $('#userFullname').text(currentUser.name)
+        $('#userName').text(`@${currentUser.username}`)
+        $('[data-bs-toggle="popover"]').on('shown.bs.popover', function () {
+            $('#logout').text(`log out @${currentUser.username}`);
+        });
+        $('#userImage').attr('src', currentUser.img)
+        $('#userImage1').attr('src', currentUser.img)
+        // }
+        // else {
+        //     alert('you are not loged in redirect to log in page');
+        //     window.location.href = './Signup.html';
+        // }
         $('#tweet-form').submit(function (event) {
             event.preventDefault();
 
